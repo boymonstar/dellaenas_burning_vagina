@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dellaena's Burning Vagina",
+  "description": "Replace all Burning Man references with Dellaena's Vagina",
+  "version": "1.0",
+
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : ["js/vendor/jquery-2.1.1.min.js",
+        "js/vendor/jquery.ba-replacetext.js",
+        "js/app/contentscript.js"]
+    }
+  ]
+}
