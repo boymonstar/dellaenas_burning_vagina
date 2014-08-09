@@ -1,7 +1,14 @@
 (function ($){
+
+  $.expr[":"].contains = $.expr.createPseudo(function(arg) {
+    return function( elem ) {
+      return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+    };
+  });
+
   $(function(){
     function vaginize() {
-      $(':contains("Burning Man")').replaceText(/Burning Man/i, "Dellaena's Vagina");
+      $(':contains("burning man")').replaceText(/Burning Man/i, "Dellaena's Vagina");
     }
     vaginize();
     setTimeout(vaginize, 2000);
